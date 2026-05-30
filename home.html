@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dhairya | E-Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body{
+  background:#0b1220;
+  color:#e5e7eb;
+  line-height:1.6;
+}
+
+/* NAV */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(10,15,30,0.95);
+  display:flex;
+  justify-content:space-between;
+  padding:12px 18px;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+  z-index:1000;
+}
+
+nav h1{
+  color:#38bdf8;
+  font-size:16px;
+}
+
+nav a{
+  color:#cbd5e1;
+  margin-left:12px;
+  text-decoration:none;
+  font-size:13px;
+}
+
+nav a:hover{
+  color:#38bdf8;
+}
+
+/* SECTIONS */
+section{
+  max-width:900px;
+  margin:85px auto 20px;
+  padding:20px;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding-top:120px;
+}
+
+.hero h1{
+  font-size:42px;
+  color:#38bdf8;
+}
+
+.hero p{
+  color:#94a3b8;
+  margin-top:10px;
+}
+
+/* CARD */
+.card{
+  background:#111827;
+  padding:18px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.08);
+  margin-top:12px;
+  transition:0.2s;
+}
+
+.card:hover{
+  transform:translateY(-3px);
+  border-color:#38bdf8;
+}
+
+/* HEADINGS */
+h2{
+  color:#38bdf8;
+  font-size:18px;
+  border-left:3px solid #38bdf8;
+  padding-left:10px;
+  margin-bottom:10px;
+}
+
+/* CERTIFICATES GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:10px;
+}
+
+.grid img{
+  width:100%;
+  border-radius:8px;
+  border:1px solid rgba(255,255,255,0.1);
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.grid img:hover{
+  transform:scale(1.03);
+}
+
+/* FULL SCREEN VIEW */
+.modal{
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.92);
+  justify-content:center;
+  align-items:center;
+  z-index:2000;
+}
+
+.modal img{
+  max-width:95%;
+  max-height:95%;
+  border-radius:10px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  font-size:13px;
+  color:#94a3b8;
+  border-top:1px solid rgba(255,255,255,0.08);
+  margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h1>E-Portfolio</h1>
+  <div>
+    <a href="#about">About</a>
+    <a href="#self">Self</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#youtube">YouTube</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>MY E-PORTFOLIO</h1>
+  <p>A reflection of my learning journey, personality, growth and achievements.</p>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>Title Card</h2>
+  <div class="card">
+    <p><b>Name:</b> Dhairya Papneja</p>
+    <p><b>Age:</b> 14</p>
+    <p><b>Class:</b> IX A</p>
+    <p><b>School:</b> Police DAV Public School, Jalandhar</p>
+    <p><b>Class Teacher:</b> Divya Jyoti</p>
+    <p><b>Parents:</b> Sanjeev Kumar & Rekha Papneja</p>
+  </div>
+</section>
+
+<!-- SELF -->
+<section id="self">
+  <h2>Self Awareness</h2>
+  <div class="card">
+    <p><b>Goals:</b> Score 95% and improve coding skills</p>
+    <p><b>Strengths:</b> Discipline, patience, consistency</p>
+    <p><b>Interests:</b> Technology, Guitar, Rubik’s Cube</p>
+    <p><b>Hobbies:</b> Video editing, gaming, puzzles</p>
+    <p><b>Fitness Goal:</b> Improve health and maintain discipline</p>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+  <h2>Responsibilities / Achievements</h2>
+  <div class="card">
+    • Improved academic performance<br>
+    • Participated in school activities<br>
+    • Built a YouTube channel with 1.22K+ subscribers<br>
+    • Developed consistency and discipline in life
+  </div>
+</section>
+
+<!-- CERTIFICATES (UPDATED SECTION) -->
+<section id="certificates">
+  <h2>Certificates</h2>
+
+  <div class="grid">
+    <img src="1.jpeg" onclick="openImg(this)">
+    <img src="2.jpeg" onclick="openImg(this)">
+    <img src="3.jpg" onclick="openImg(this)">
+    <img src="4.jpeg" onclick="openImg(this)">
+    <img src="5.jpeg" onclick="openImg(this)">
+    <img src="6.jpeg" onclick="openImg(this)">
+  </div>
+</section>
+
+<!-- YOUTUBE -->
+<section id="youtube">
+  <h2>YouTube Channel</h2>
+  <div class="card">
+    <p><b>Channel:</b> @middgsolos</p>
+    <p><b>Subscribers:</b> 1.22K+</p>
+    <p>
+      <a href="https://www.youtube.com/@middgsolos" target="_blank" style="color:#38bdf8;">
+        Visit Channel
+      </a>
+    </p>
+  </div>
+</section>
+
+<footer>
+  © 2026 Dhairya | E-Portfolio Project
+</footer>
+
+<!-- FULL SCREEN CERTIFICATE VIEW -->
+<div class="modal" id="modal" onclick="closeImg()">
+  <img id="modalImg">
+</div>
+
+<script>
+function openImg(img){
+  document.getElementById("modal").style.display="flex";
+  document.getElementById("modalImg").src=img.src;
+}
+
+function closeImg(){
+  document.getElementById("modal").style.display="none";
+}
+</script>
+
+</body>
+</html>

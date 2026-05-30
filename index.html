@@ -97,14 +97,26 @@ h2{
   margin-bottom:10px;
 }
 
-/* CERTIFICATES GRID */
+/* HOME / INTERESTS GRID */
 .grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:12px;
+}
+
+.card img{
+  width:100%;
+  border-radius:8px;
+}
+
+/* CERTIFICATES */
+.cert-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
   gap:10px;
 }
 
-.grid img{
+.cert-grid img{
   width:100%;
   border-radius:8px;
   border:1px solid rgba(255,255,255,0.1);
@@ -112,11 +124,11 @@ h2{
   transition:0.2s;
 }
 
-.grid img:hover{
+.cert-grid img:hover{
   transform:scale(1.03);
 }
 
-/* FULL SCREEN VIEW */
+/* FULL SCREEN CERTIFICATE */
 .modal{
   display:none;
   position:fixed;
@@ -153,6 +165,7 @@ footer{
 <nav>
   <h1>E-Portfolio</h1>
   <div>
+    <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#self">Self</a>
     <a href="#achievements">Achievements</a>
@@ -162,7 +175,7 @@ footer{
 </nav>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="home">
   <h1>MY E-PORTFOLIO</h1>
   <p>A reflection of my learning journey, personality, growth and achievements.</p>
 </section>
@@ -177,6 +190,31 @@ footer{
     <p><b>School:</b> Police DAV Public School, Jalandhar</p>
     <p><b>Class Teacher:</b> Divya Jyoti</p>
     <p><b>Parents:</b> Sanjeev Kumar & Rekha Papneja</p>
+  </div>
+</section>
+
+<!-- HOME / INTERESTS -->
+<section>
+  <h2>Interests</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="guitar.jpg" alt="Guitar">
+      <p><b>Guitar</b></p>
+      <p style="color:#94a3b8;font-size:13px;">
+        I enjoy playing guitar and learning music.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="rubik.jpg" alt="Rubik Cube">
+      <p><b>Rubik’s Cube</b></p>
+      <p style="color:#94a3b8;font-size:13px;">
+        I like solving Rubik’s cube to improve focus.
+      </p>
+    </div>
+
   </div>
 </section>
 
@@ -203,11 +241,11 @@ footer{
   </div>
 </section>
 
-<!-- CERTIFICATES (UPDATED SECTION) -->
+<!-- CERTIFICATES -->
 <section id="certificates">
   <h2>Certificates</h2>
 
-  <div class="grid">
+  <div class="cert-grid">
     <img src="1.jpeg" onclick="openImg(this)">
     <img src="2.jpeg" onclick="openImg(this)">
     <img src="3.jpg" onclick="openImg(this)">
@@ -235,7 +273,7 @@ footer{
   © 2026 Dhairya | E-Portfolio Project
 </footer>
 
-<!-- FULL SCREEN CERTIFICATE VIEW -->
+<!-- CERTIFICATE FULLSCREEN -->
 <div class="modal" id="modal" onclick="closeImg()">
   <img id="modalImg">
 </div>
